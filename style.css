@@ -714,12 +714,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-bottom: 1.35rem;
 }
 
 .gold-line {
-  width: 45px;
+  width: 36px;
   height: 1.5px;
   background: var(--c-gold-bright);
 }
@@ -728,18 +729,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans-display);
   font-size: 0.85rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   color: var(--c-gold-bright);
+  text-transform: uppercase;
 }
 
 .hero-grand-title {
   font-family: var(--font-serif-editorial);
-  font-size: clamp(3rem, 5.5vw, 5rem);
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.15;
   color: #ffffff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.35rem;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  text-wrap: balance;
 }
 
 .hero-gradient-text {
@@ -747,15 +750,17 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: italic;
+  display: inline;
 }
 
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1.12rem;
   color: #e2e8f0;
-  line-height: 1.75;
-  max-width: 820px;
+  line-height: 1.7;
+  max-width: 780px;
   margin: 0 auto 2.5rem auto;
   font-weight: 400;
+  text-wrap: pretty;
 }
 
 /* Hero Trust Metrics */
@@ -3429,23 +3434,41 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* Mobile Typography - Clean and Balanced */
-  .hero-grand-title {
-    font-size: clamp(2rem, 6.2vw, 2.65rem);
-    line-height: 1.18;
+  .hero-eyebrow {
     margin-bottom: 1.15rem;
-  }
-  .hero-description {
-    font-size: 0.96rem;
-    line-height: 1.65;
-    max-width: 100%;
-    margin-bottom: 1.75rem;
-  }
-  .hero-eyebrow .eyebrow-text {
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
+    gap: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   .gold-line {
-    width: 28px;
+    display: none;
+  }
+  .eyebrow-text {
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
+    background: rgba(201, 138, 44, 0.18);
+    border: 1px solid rgba(201, 138, 44, 0.45);
+    padding: 0.35rem 0.95rem;
+    border-radius: var(--r-full);
+    display: inline-block;
+    text-align: center;
+    color: var(--c-gold-bright);
+    font-weight: 800;
+  }
+
+  .hero-grand-title {
+    font-size: clamp(2.1rem, 6.8vw, 2.75rem);
+    line-height: 1.2;
+    margin-bottom: 1.15rem;
+    text-wrap: balance;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    max-width: 540px;
+    margin: 0 auto 1.75rem auto;
+    text-wrap: pretty;
   }
 
   .editorial-heading {
